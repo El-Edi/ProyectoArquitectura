@@ -1,0 +1,25 @@
+# App Arquitectura
+API conectada con mySql para un sistema que contenga Usuarios, Ubicactiones, Eventos
+## Uso
+Se debe crear el archivo .env con los siguientes parametros
+usuarioBD="TuUsuario"
+constrasenaBD="TuContraseña*"
+host="TuHost"
+puertoBD="TuPuertoBD"
+db_name="NombreTuBD"
+
+### requestBody creación de usuarios
+{
+    "id_usuario": int,
+    "nombre": string,
+    "apellido": ,string
+    "telefono": string,
+    "correo": string,
+    "fecha_nacimiento": string
+}
+
+## Historial de Cambios
+
+### Versión 1.0.0 (Fecha de Lanzamiento: 12/11/2023)
+
+- Funcionalidad básica de la aplicación con adaptabilidad a crecimiento.
