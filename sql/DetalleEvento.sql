@@ -2,8 +2,8 @@ SELECT * FROM dbarquitectura.detalleEvento;
 
 CREATE TABLE `dbarquitectura`.`detalleEvento` (
   `id_detalle` INT NOT NULL,
-  `id_evento` INT NOT NULL,
-  `descripcion` VARCHAR(100) NULL,
+  `id_evento` varchar(45) NOT NULL,
+  `descripcion` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id_detalle`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
