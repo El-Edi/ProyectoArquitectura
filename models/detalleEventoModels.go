@@ -4,13 +4,13 @@ import (
 	"gorm.io/gorm"
 )
 
-type MostrarDetalle struct {
+type DetalleEvento struct {
 	gorm.Model
 	Id_Detalle uint
 	Id_evento string
 	descripcion string
 }
 
-func (MostrarDetalle) TableName() string {
-	return "MostrarDetalle"
+func (DetalleEvento) TableName() string {
+	return "DetalleEvento"
 }

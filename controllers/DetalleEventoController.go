@@ -7,9 +7,9 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func MostrarDetalleGetById(c *gin.Context) {
+func DetalleEventoGetById(c *gin.Context) {
 	Id_evento := c.Param("id")
-	var detalle models.MostrarDetalle
+	var detalle models.DetalleEvento
 	configs.DB.Where("Id_evento = ?", Id_evento).Find(&detalle)
 	c.JSON(200, &detalle)
 	return
