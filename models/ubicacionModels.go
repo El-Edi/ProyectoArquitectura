@@ -1,15 +1,13 @@
 package models
 
-import (
-	"gorm.io/gorm"
-)
-
 type Ubicacion struct {
-	gorm.Model
 	Id_ubicacion uint
 	Longitud     string
 	Latitud      string
-	Presicion    uint
+	Precision    uint
+	Id_usuario   uint    `gorm:"column:id_usuario;index" json:"custom_usuario_id"`
+	Usuario      Usuario `gorm:"foreignKey:Id_usuario" json:"author"`
+	Base
 }
 
 func (Ubicacion) TableName() string {

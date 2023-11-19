@@ -1,17 +1,13 @@
 package models
 
-import (
-	"gorm.io/gorm"
-)
-
 type Usuario struct {
-	gorm.Model
-	Id_usuario       uint
+	Id_usuario       uint `gorm:"primaryKey" json:"id_usuario"`
 	Nombre           string
 	Apellido         string
 	Telefono         string
 	Correo           string
 	Fecha_nacimiento string
+	Base
 }
 
 func (Usuario) TableName() string {
