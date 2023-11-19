@@ -9,6 +9,6 @@ import (
 func EventoRouter(router *gin.Engine) {
 
 	routes := router.Group("api/v1/evento")
-	routes.POST("", controllers.UsuarioCreate)
-	routes.GET("", controllers.UsuarioGet)
+	routes.POST("", controllers.EventoCreate)
+	routes.GET("", controllers.EventoGet)
 }
