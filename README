@@ -8,7 +8,7 @@ host="TuHost"
 puertoBD="TuPuertoBD"
 db_name="NombreTuBD"
 
-### requestBody creación de usuarios
+## requestBody creación de usuarios
 {
     "id_usuario": int,
     "nombre": string,
