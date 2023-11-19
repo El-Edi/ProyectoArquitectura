@@ -9,5 +9,5 @@ import (
 func MostrarDetalleRouter(router *gin.Engine) {
 
 	routes := router.Group("api/v1/detalle")
-	routes.GET("/:id", controllers.UbicacionGetById)
+	routes.GET("/:id", controllers.DetalleEventoGetById)
 }
