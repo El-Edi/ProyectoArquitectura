@@ -18,6 +18,8 @@ func main() {
 
 	routes.UsuarioRouter(r)
 	routes.UbicacionRouter(r)
+	routes.MostrarDetalleRouter(r)
+	routes.EventoRouter(r)
 
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{

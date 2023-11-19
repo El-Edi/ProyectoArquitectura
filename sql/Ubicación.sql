@@ -1,6 +1,6 @@
-SELECT * FROM bdarquitectura.ubicacion;
+SELECT * FROM dbarquitectura.ubicacion;
 
-CREATE TABLE `bdarquitectura`.`ubicacion` (
+CREATE TABLE `dbarquitectura`.`ubicacion` (
   `id_ubicacion` INT NOT NULL,
   `longitud` VARCHAR(45) NULL,
   `latitud` VARCHAR(45) NULL,
