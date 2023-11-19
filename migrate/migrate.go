@@ -10,5 +10,5 @@ func init() {
 }
 
 func main() {
-	configs.DB.AutoMigrate(&models.Usuario{}, &models.Ubicacion{},&models.DetalleEvento{})
+	configs.DB.AutoMigrate(&models.Usuario{}, &models.Ubicacion{},&models.DetalleEvento{},&models.Evento{})
 }
