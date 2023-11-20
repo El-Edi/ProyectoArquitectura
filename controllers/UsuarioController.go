@@ -16,27 +16,27 @@ type UsuarioRequestBody struct {
 	Fecha_nacimiento string `json:"fecha_nacimiento"`
 }
 
-func UsuarioCreate(c *gin.Context) {
+func UsuarioCreate(contextServe *gin.Context) {
 
 	body := UsuarioRequestBody{}
 
-	c.BindJSON(&body)
+	contextServe.BindJSON(&body)
 
 	usuario := &models.Usuario{Id_usuario: body.Id_usuario, Nombre: body.Nombre, Apellido: body.Apellido, Telefono: body.Telefono, Correo: body.Correo, Fecha_nacimiento: body.Fecha_nacimiento}
 
 	result := configs.DB.Create(&usuario)
 
 	if result.Error != nil {
-		c.JSON(500, gin.H{"Error": "Failed to insert"})
+		contextServe.JSON(500, gin.H{"Error": "Failed to insert"})
 		return
 	}
 
-	c.JSON(200, &usuario)
+	contextServe.JSON(200, &usuario)
 }
 
-func UsuarioGet(c *gin.Context) {
+func UsuarioGet(contextServe *gin.Context) {
 	var usuario []models.Usuario
 	configs.DB.Limit(100).Find(&usuario)
-	c.JSON(200, &usuario)
+	contextServe.JSON(200, &usuario)
 	return
 }

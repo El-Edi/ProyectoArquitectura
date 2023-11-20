@@ -17,6 +17,13 @@ db_name="NombreTuBD"
     "correo": string,
     "fecha_nacimiento": string
 }
+## requestBody creación de eventos
+{
+    "id_evento": int,
+    "tipo": string,
+    "descripcion": string,
+    "id_ubicacion": int
+}   
 
 ## Historial de Cambios
 
