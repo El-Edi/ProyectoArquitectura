@@ -1,12 +1,13 @@
 package models
 
 type Ubicacion struct {
-	Id_ubicacion uint
+	Id_ubicacion uint `gorm:"primary_Key"`
 	Longitud     string
 	Latitud      string
 	Precision    uint
-	Id_usuario   uint    `gorm:"column:id_usuario;index" json:"custom_usuario_id"`
-	Usuario      Usuario `gorm:"foreignKey:Id_usuario" json:"author"`
+	Id_usuario   uint
+	// Id_usuario   uint    `gorm:"column:id_usuario;index" json:"custom_usuario_id"`
+	// Usuario      Usuario `gorm:"foreignKey:Id_usuario" json:"author"`
 	Base
 }
 

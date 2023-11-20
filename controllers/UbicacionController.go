@@ -7,17 +7,17 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func UbicacionGet(c *gin.Context) {
+func UbicacionGet(contextServe *gin.Context) {
 	var ubicacion []models.Ubicacion
 	configs.DB.Limit(100).Find(&ubicacion)
-	c.JSON(200, &ubicacion)
+	contextServe.JSON(200, &ubicacion)
 	return
 }
 
-func UbicacionGetById(c *gin.Context) {
-	id_usuario := c.Param("id")
+func UbicacionGetById(contextServe *gin.Context) {
+	id_usuario := contextServe.Param("id")
 	var ubicacion models.Ubicacion
 	configs.DB.Where("id_usuario = ?", id_usuario).Find(&ubicacion)
-	c.JSON(200, &ubicacion)
+	contextServe.JSON(200, &ubicacion)
 	return
 }
